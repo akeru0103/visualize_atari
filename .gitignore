@@ -1,6 +1,6 @@
 ##### FILE TYPES #####
 
-*.tar
+# *.tar
 *.pt
 *.DS_Store
 *.pyc
