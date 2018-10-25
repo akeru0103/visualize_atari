@@ -38,7 +38,7 @@ frame_ix=1307
 plt.imshow(history['ins'][frame_ix])
 for a in f.axes: a.get_xaxis().set_visible(False) ; a.get_yaxis().set_visible(False)
 # plt.show(f)
-
+plt.savefig('atari.png')
 
 ''' 4 '''
 def jacobian(model, layer, top_dh, X):
@@ -101,4 +101,5 @@ plt.imshow(perturbation_map)
 plt.title('Ours', fontsize=30)
 
 for a in f.axes: a.get_xaxis().set_visible(False) ; a.get_yaxis().set_visible(False)
-plt.show() #; f.savefig('./figures/jacobian-vs-perturb.png', bbox_inches='tight')
+##plt.show() #; f.savefig('./figures/jacobian-vs-perturb.png', bbox_inches='tight')
+plt.savefig('atari2.png')
