@@ -48,8 +48,8 @@ def jacobian(model, layer, top_dh, X):
     _ = model(X) # do a forward pass so the forward hooks can be called
 
     # backprop positive signal
-    # torch.autograd.backward(top_h_, top_dh.clone(), retain_variables=True) # backward hooks are called here
-    torch.autograd.backward(top_h_, top_dh.clone()) # backward hooks are called here
+    torch.autograd.backward(top_h_, top_dh.clone(), retain_variables=True) # backward hooks are called here
+    # torch.autograd.backward(top_h_, top_dh.clone()) # backward hooks are called here
     hook1.remove()
     return X[0].grad.data.clone().numpy(), X[0].data.clone().numpy()
 
